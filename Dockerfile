@@ -50,6 +50,9 @@ RUN chmod +x /entrypoint.sh
 RUN chmod +x /cronjob.sh
 RUN chmod +x /usr/bin/xteve
 
+# Add powershell script to root
+ADD cronjob.ps1 /
+
 # Expose Port
 EXPOSE 34400
 
