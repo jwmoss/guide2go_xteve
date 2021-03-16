@@ -13,4 +13,11 @@ RUN apk add --no-cache \
     userspace-rcu \
     zlib \
     icu-libs \
-    curl
+    curl \
+    ffmpeg \
+    vlc
+
+# Volumes
+VOLUME /config
+VOLUME /root/.xteve
+VOLUME /tmp/xteve
