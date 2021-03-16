@@ -39,3 +39,14 @@ RUN ln -s /opt/microsoft/powershell/7/pwsh /usr/bin/pwsh
 VOLUME /config
 VOLUME /root/.xteve
 VOLUME /tmp/xteve
+
+# Set executable permissions
+RUN chmod +x /entrypoint.sh
+RUN chmod +x /cronjob.sh
+RUN chmod +x /usr/bin/xteve
+
+# Expose Port
+EXPOSE 34400
+
+# Entrypoint
+ENTRYPOINT ["./entrypoint.sh"]
